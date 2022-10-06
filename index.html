@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	 <head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+		<!-- project stylesheet link -->
+		<link href="styles.css" rel="stylesheet">
+		
+		<title>Hang the Charlatan</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			
+			body {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				font-family: Arial, Helvetica, sans-serif;
+				min-height: 100vh;
+				margin: 0;
+			}
+			
+			#canvas {
+				background: white;
+				border-radius: 5px;
+			}
+			
+			#guessInput {
+				width: 50px;
+				text-transform: lowercase;
+			}
+			
+			#face, #rightfoot, #leftfoot{
+				display: none;
+			}
+		</style>	
+	</head>
+	<body>
+		<h3 style="font-family: Times New Roman;">This man has been convicted of multiple insidious crimes.</h3>
+		
+		<canvas id="canvas" width="550" height="550"></canvas>
+		
+		<div class="container bg-white p-5  mt-0 pt-0 text-center">
+			<div id="innerContainer" class="mx-auto">
+				<h1 class="text-dark text-center" style="font-family: Impact;" >Hang the Charlatan</h1>
+				<form class="textx-light mt-3 p-3 border border-info" autocomplete="off">
+					<div class="mb-3">
+						<p id="wordGuess" class="display-4"></p>
+						<label for="guessInput" class="form-label">Type your lettered guess and click submit</label>
+						<input name="guessInput" type="text" class="form-control text-center mx-auto" maxlength="1" pattern="[a-zA-Z]" id="guessInput">
+						<p class="display-6" id="wrong"></p>
+					</div>
+					<button type="submit" class="btn btn-primary" id="submit-button">GUESS</button>
+					<div class="form-check form-switch mx-auto" style="width:20%; margin-top: 10px;">
+					  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+					  <label class="form-check-label" for="flexSwitchCheckDefault" id="flexSwitchCheckDefaultText"><b>Vowels Allowed</b></label>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<img src="images/face.png" alt="" id="face" />
+		<img src="images/rightfoot.png" alt="" id="rightfoot" />
+		<img src="images/leftfoot.png" alt="" id="leftfoot" />
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="scripts.js"></script>
+		
+		<script>
+		
+		</script>
+	</body>
+</html>
